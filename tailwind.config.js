@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "russo": ["var(--font-russo)"],
+        "roboto": ["var(--font-roboto)"],
+      },
       fontSize: {
         xxs: "0.625rem"
       },

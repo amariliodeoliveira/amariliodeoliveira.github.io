@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 import HeroSvg from "../../../public/svg/hero-img.svg";
-import ArrowDown from "../../../public/svg/arrow-down.svg";
 import GithubMark from "../../../public/svg/github-mark.svg";
 import LinkedInMark from "../../../public/svg/linkedin-mark.svg";
+
+import { LowerBar } from "../ui/LowerBar";
 
 export const Hero: React.FC = () => {
   return (
@@ -27,7 +28,13 @@ export const Hero: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Image src={GithubMark} alt="GitHub" width={30} height={30} />
+                  <Image
+                    className="hover:"
+                    src={GithubMark}
+                    alt="GitHub"
+                    width={30}
+                    height={30}
+                  />
                 </Link>
               </ul>
               <ul>
@@ -53,9 +60,8 @@ export const Hero: React.FC = () => {
           <Image className="p-3" src={HeroSvg} fill={true} alt="" />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center w-full h-auto bg-dutch-white">
-        <Image src={ArrowDown} width={40} height={40} alt="" />
-      </div>
+
+      <LowerBar />
     </section>
   );
 };

@@ -1,10 +1,20 @@
 import "./globals.css";
-import { Russo_One } from "next/font/google";
+import { Russo_One, Roboto } from "next/font/google";
 
 import { Navbar } from "@/components/layouts/Navbar";
 import { Aside } from "@/components/layouts/Aside";
 
-const russoOne = Russo_One({ subsets: ["latin"], weight: "400" });
+const russoOne = Russo_One({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-russo",
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-roboto",
+});
 
 export const metadata = {
   title: "Amaril.io | Portfolio",
@@ -18,9 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={russoOne.className}>
+      <body className={`${russoOne.className} ${roboto.className}`}>
         <Navbar />
-        <div className="flex flex-row w-full">
+        <div className="flex flex-row w-full bg-dutch-white">
           <Aside />
           {children}
           <Aside />
