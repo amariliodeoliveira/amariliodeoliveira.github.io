@@ -12,7 +12,7 @@ const russoOne = Russo_One({
 
 const roboto = Roboto_Slab({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "600"],
   variable: "--font-roboto",
 });
 
@@ -33,11 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="pt-BR" className={`${russoOne.variable} ${roboto.variable}`}>
       <body>
         <Navbar />
-        <div className="flex flex-row w-full bg-dutch-white">
-          <Aside />
-          {children}
-          <Aside />
-        </div>
+        <div className="flex flex-row w-full bg-dutch-white">{children}</div>
       </body>
     </html>
   );

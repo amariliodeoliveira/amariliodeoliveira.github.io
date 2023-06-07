@@ -7,9 +7,9 @@ import { LowerBar } from "../ui/LowerBar";
 export const AboutMe: React.FC = () => {
   return (
     <section className="flex flex-col gap-y-6 max-w-4xl m-auto w-full min-h-screen bg-dutch-white pt-24">
-      <h2 className="text-5xl font-russo text-transparent bg-clip-text bg-gradient-to-r from-[#184E77] to-[#34A0A4]">
-        Dream big. Work harder.
-      </h2>
+      <h1 className="text-5xl font-russo text-transparent bg-clip-text bg-gradient-to-r from-[#184E77] to-[#34A0A4]">
+        Dream. Believe. Achieve.
+      </h1>
 
       <div className="animate-fade-in-1 flex flex-row">
         <div className="flex shrink-0 w-96 relative items-start h-full">

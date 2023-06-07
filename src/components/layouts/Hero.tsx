@@ -16,12 +16,12 @@ export const Hero: React.FC = () => {
             <h1 className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#454545] to-[#533B4D]">
               &lt; Amarilio de Oliveira &#47;&gt;
             </h1>
-            <p className="animate-fade-in-1 text-xl text-brown-sugar">
+            <h2 className="animate-fade-in-1 text-xl text-brown-sugar">
               Desenvolvedor Fullstack
-            </p>
-            <p className="animate-fade-in-1 text-base text-taupe-gray">
+            </h2>
+            <h3 className="animate-fade-in-1 text-base text-taupe-gray">
               Next.js 13 | React.js | Typescript | Tailwind CSS
-            </p>
+            </h3>
 
             <nav className="animate-fade-in flex flex-row gap-x-5 mt-3">
               <ul>
