@@ -8,13 +8,13 @@ export const Navbar: React.FC = () => {
       </div>
       <nav className="flex flex-row justify-between list-none gap-x-14">
         <li>
-          <Link href="/aboutme">Sobre</Link>
+          <Link href="/sobre">Sobre</Link>
         </li>
         <li>
-          <Link href="/projects">Projetos</Link>
+          <Link href="/projetos">Projetos</Link>
         </li>
         <li>
-          <Link href="/resume">Currículo</Link>
+          <Link href="/curriculo">Currículo</Link>
         </li>
       </nav>
     </header>
