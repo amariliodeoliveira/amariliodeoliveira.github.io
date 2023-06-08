@@ -21,23 +21,6 @@ module.exports = {
         "taupe-gray": "#8E8484",
         "paynes-gray": "#34444A",
       },
-      animation: {
-        'fade-in-1': 'fadeInSlow 1s linear',
-        'fade-in-2': 'fadeInSlow 2s linear',
-        'fade-in-3': 'fadeIn 3s linear',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '66%': { opacity: 0 },
-          '100': { opacity: 100 },
-        },
-        fadeInSlow: {
-          '0%': { opacity: 0 },
-          '50%': { opacity: 0 },
-          '100': { opacity: 100 },
-        },
-      },
     },
   },
   plugins: [],

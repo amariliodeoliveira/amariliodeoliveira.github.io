@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
 
@@ -110,7 +113,12 @@ export const JobExperience: React.FC<ResumeProps> = ({
     duration !== "Momento" && !duration.includes("-");
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="flex flex-col"
+    >
       <h3 className="font-bold text-paynes-gray font-roboto">{jobTitle}</h3>
       {companyWebsite ? (
         <p className="flex text-paynes-gray font-roboto">
@@ -134,6 +142,6 @@ export const JobExperience: React.FC<ResumeProps> = ({
           {startMonth} de {startYear} &ndash; {endDateString} &bull; {duration}
         </p>
       )}
-    </div>
+    </motion.div>
   );
 };

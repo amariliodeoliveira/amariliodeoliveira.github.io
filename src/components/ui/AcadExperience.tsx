@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from "react";
 import Link from "next/link";
 
@@ -66,7 +69,13 @@ export const AcadExperience: React.FC<AcadExperienceProps> = ({
   const endDateString = `${endMonth} ${endYear}`;
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5, x: "-30%" }}
+      whileInView={{ opacity: 1, scale: 1, x: 0 }}
+      transition={{ ease: "easeOut", duration: 0.5, delay: 0.1 }}
+      viewport={{ once: true }}
+      className="flex flex-col"
+    >
       <h3 className="font-bold text-paynes-gray font-roboto">{courseTitle}</h3>
       <p className="flex text-paynes-gray font-roboto">
         <Link
@@ -82,6 +91,6 @@ export const AcadExperience: React.FC<AcadExperienceProps> = ({
       <p className="flex text-paynes-gray font-roboto">
         {startMonth} {startYear} &ndash; {endDateString} &bull; {duration}
       </p>
-    </div>
+    </motion.div>
   );
 };
