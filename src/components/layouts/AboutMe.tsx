@@ -2,8 +2,6 @@ import Image from "next/image";
 
 import PersonalPhoto from "../../../public/img/avatar-photo.webp";
 
-import { LowerBar } from "../ui/LowerBar";
-
 export const AboutMe: React.FC = () => {
   return (
     <section className="flex flex-col gap-y-6 max-w-4xl m-auto w-full min-h-screen bg-dutch-white pt-24">
@@ -11,10 +9,17 @@ export const AboutMe: React.FC = () => {
         Dream. Believe. Achieve.
       </h1>
 
-      <div className="animate-fade-in-1 flex flex-row">
+      <div className="animate-fade-in-1 flex sm:flex-row flex-col">
         <div className="flex shrink-0 w-96 relative items-start h-full">
-          <Image
-            className="object-contain overflow-hidden rounded-2xl"
+          <Image /* Adapted for Mobile */
+            className="sm:hidden object-contain overflow-hidden rounded-2xl"
+            src={PersonalPhoto}
+            fill={true}
+            alt=""
+          />
+
+          <Image 
+            className="hidden sm:block object-contain overflow-hidden rounded-2xl"
             src={PersonalPhoto}
             width={500}
             height={500}
@@ -48,8 +53,6 @@ export const AboutMe: React.FC = () => {
           </div>
         </div>
       </div>
-
-      <LowerBar />
     </section>
   );
 };

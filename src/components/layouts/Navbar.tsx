@@ -6,7 +6,8 @@ export const Navbar: React.FC = () => {
       <div>
         <Link href="#">&lt;&#47;&gt;</Link>
       </div>
-      <nav className="flex flex-row justify-between list-none gap-x-14">
+
+      <nav className="flex flex-row sm:justify-between list-none sm:gap-x-14 gap-x-8">
         <li>
           <Link href="/sobre">Sobre</Link>
         </li>

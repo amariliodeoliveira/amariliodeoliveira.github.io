@@ -1,6 +1,5 @@
 import { AcadExperience } from "../ui/AcadExperience";
 import { JobExperience } from "../ui/JobExperience";
-import { LowerBar } from "../ui/LowerBar";
 
 export const Resume: React.FC = () => {
   return (
@@ -78,8 +77,6 @@ export const Resume: React.FC = () => {
           />
         </div>
       </div>
-
-      <LowerBar />
     </section>
   );
 };
